@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome books
+# ToDo List
 
 > A project using HTML and CSS.
 
@@ -22,6 +22,10 @@ Clone the repositary localy using the command ' git clone '
 
 ## Authors
 
-- 👤 **Creative Commons license of the design**
+- -👤 **Houda MZARI**
 
-- [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+- -- GitHub: [@houdamzari](https://github.com/houdamzari)
+
+  -- LinkedIn: [@houdamzari](https://www.linkedin.com/in/houda-mzari-2304401b1/)
+
+  -- Portfolio [@houdamzari](https://houdamzari.github.io/Portfolio-Website/)
