@@ -1,11 +1,51 @@
-import _ from 'lodash';
 import './style.css';
+
+const arr = [
+  {
+    id: 1,
+    description: 'work',
+    completed: false,
+  },
+  {
+    id: 2,
+    description: 'go to gym',
+    completed: false,
+  },
+];
+const form = document.querySelector('.form');
+const todoWrapper = document.querySelector('.todo-list');
+// const checkboxes = document.querySelectorAll("input[type='checkbox']");
+const userInput = document.querySelector('.user-input');
+let todoList = '';
 function component() {
-  const element = document.createElement('div');
-
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  return element;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const item of arr) {
+    todoList += `
+    <div class="list"><li class='todo-list-item'>
+    <input class="checkbox" type="checkbox" name="completed" id="">
+      <div>${item.description}</div></li>
+      <div class='dots'><span>.</span>
+     <span>.</span>
+      <span>.</span>
+      </div></div>`;
+  }
 }
+component();
+todoWrapper.innerHTML = todoList;
 
-document.body.appendChild(component());
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let input = '';
+  userInput.addEventListener('change', (e) => {
+    e.preventDefault();
+    input = e.target.value;
+    if (input !== '') {
+      const task = {
+        Id: arr.length,
+        description: e.target.value,
+        completed: false,
+      };
+      arr.push(task);
+    }
+  });
+});
