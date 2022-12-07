@@ -12,7 +12,7 @@ const arr = [
     completed: false,
   },
 ];
-const form = document.querySelector('.form');
+// const form = document.querySelector('.form');
 const todoWrapper = document.querySelector('.todo-list');
 // const checkboxes = document.querySelectorAll("input[type='checkbox']");
 const userInput = document.querySelector('.user-input');
@@ -33,11 +33,12 @@ function component() {
 component();
 todoWrapper.innerHTML = todoList;
 
-form.addEventListener('submit', (e) => {
+document.addEventListener('submit', (e) => {
   e.preventDefault();
   let input = '';
-  userInput.addEventListener('change', (e) => {
+  userInput.addEventListener('keypress', (e) => {
     e.preventDefault();
+    // console.log(e.target.value);
     input = e.target.value;
     if (input !== '') {
       const task = {

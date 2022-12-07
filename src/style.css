@@ -4,9 +4,7 @@ body {
 
 .wrapper {
   background-color: white;
-  border-radius: 12px;
   width: 580px;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +17,7 @@ body {
   height: 100px;
   text-decoration: none;
   list-style: none;
-  padding: 0 50px 20px 50px;
+  padding: 0 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,19 +58,48 @@ body {
 
 .user-input {
   border: none;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-color: gray;
-  padding: 5px 50px;
+  padding: 15px 50px;
   font-size: 16px;
   font-style: italic;
+  width: 100%;
 }
 
 .heading {
+  padding: 15px 50px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.clear {
+  padding: 20px;
+  text-align: center;
+  background-color: antiquewhite;
+  border: none;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-color: gray;
-  padding: 5px 50px;
-  font-size: 20px;
-  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: gray;
+}
+
+svg {
+  fill: gray;
+}
+
+.flex > svg {
+  width: 20px;
+  padding: 0 10px;
 }
