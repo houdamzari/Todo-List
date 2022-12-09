@@ -74,7 +74,7 @@ body {
 .clear {
   padding: 20px;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: rgb(235, 191, 135);
   border: none;
   cursor: pointer;
   transition: all 0.4s;
