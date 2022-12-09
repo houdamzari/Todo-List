@@ -8,21 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 50%;
-  transform: translateX(-300px);
-}
-
-.todo-list {
-  width: 480px;
-  height: 100px;
-  text-decoration: none;
-  list-style: none;
-  padding: 0 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 200px;
 }
 
 .todo-list-item {
@@ -30,7 +17,18 @@ body {
   width: 450px;
   gap: 30px;
   font-size: 20px;
-  padding: 0 50px;
+  padding: 15px 50px;
+}
+
+.draggable {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
 }
 
 .list {
@@ -46,14 +44,17 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  padding: 10px;
+  padding: 0;
   cursor: pointer;
+  cursor: move;
 }
 
 .dots > span {
   font-size: 16px;
   font-weight: bolder;
   height: 10px;
+  position: relative;
+  top: -8px;
 }
 
 .user-input {
@@ -75,6 +76,8 @@ body {
   text-align: center;
   background-color: antiquewhite;
   border: none;
+  cursor: pointer;
+  transition: all 0.4s;
 }
 
 .flex-wrapper {
@@ -93,13 +96,88 @@ body {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-color: gray;
+  align-items: center;
+  margin: 0;
+  padding-right: 10px;
 }
 
 svg {
   fill: gray;
 }
 
-.flex > svg {
-  width: 20px;
-  padding: 0 10px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  font-family: Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: gray;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+#refresh-btn {
+  color: #8a2be2;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+#refresh-btn:hover {
+  transform: scale(1.4) rotateZ(90deg);
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-top: solid 1px #333;
+}
+
+.task-input {
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.remove-btn {
+  display: none;
+  fill: crimson;
+  transition: all 0.1s;
+  width: 50px;
+}
+
+.drag-btn {
+  cursor: move;
+}
+
+.todo-list li:focus-within .remove-btn {
+  display: block;
+}
+
+.todo-list li:focus-within .drag-btn {
+  display: none;
 }
