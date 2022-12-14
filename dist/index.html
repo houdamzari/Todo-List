@@ -11,13 +11,21 @@
   <body>
     <h1>To do list</h1>
     <div class='wrapper'>
-      <h4 class='heading'>Today's todo</h4>
-      <form action="" class='form'>
-        <input class="user-input" type="text" name="task" placeholder='Add to your list...' />
-      </form>
+      <div class='flex'>
+        <h4 class='heading'>Today's todo </h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21.986">
+          <path
+            d="M19.841 3.24A10.988 10.988 0 0 0 8.54.573l1.266 3.8a7.033 7.033 0 0 1 8.809 9.158L17 11.891v7.092h7l-2.407-2.439A11.049 11.049 0 0 0 19.841 3.24zM1 10.942a11.05 11.05 0 0 0 11.013 11.044 11.114 11.114 0 0 0 3.521-.575l-1.266-3.8a7.035 7.035 0 0 1-8.788-9.22L7 9.891V6.034c.021-.02.038-.044.06-.065L7 5.909V2.982H0l2.482 2.449A10.951 10.951 0 0 0 1 10.942z" />
+        </svg>
+      </div>
+      <div class='flex-wrapper'> <input class="user-input" type="text" name="task" placeholder='Add to your list...' />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path d="M17 13H8.414l4.293-4.293-1.414-1.414L4.586 14l6.707 6.707 1.414-1.414L8.414 15H19V4h-2v9z" /></svg>
+      </div>
       <ul class='todo-list'>
 
       </ul>
+      <button class="clear">clear all completed</button>
     </div>
   </body>
 
